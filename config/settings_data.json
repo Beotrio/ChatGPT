@@ -1,0 +1,136 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "page_transition_duration": 0.8,
+    "announcement_background_color_home_page": "#0a0a0a",
+    "announement-text-color-home-page": "#FFFFFF",
+    "announcement_background_color_collection_page": "#0a0a0a",
+    "announement-text-color-collection-page": "#ffffff",
+    "announcement_background_color_product_page": "#0a0a0a",
+    "announement-text-color-product-page": "#ffffff",
+    "announcement_background_color": "#0a0a0a",
+    "announement-text-color": "#ffffff",
+    "enable_announcement_floater": true,
+    "enable_announcement_floater_radius": true,
+    "show_announcement_bar": true,
+    "show_announcement_bar_on_home": true,
+    "cart_drawer_enabled": true,
+    "cart_drawer_background": "#0a0a0a",
+    "cart_drawer_text_color": "#ffffff",
+    "cart_drawer_button_text_color": "#ffffff",
+    "fomo_timer_background": "#e3342f",
+    "fomo_timer_text_color": "#ffffff",
+    "show_price_with_currency": true,
+    "timezone": "Australia/Perth",
+    "desktop-layout": "1fr 1fr 1fr",
+    "product_aspect_ratio": "natural",
+    "show_date_time": false,
+    "hide_homepage": false,
+    "footer_email_header": "Walk with us",
+    "email_description": "Discover first access to exclusive drops, curated collections, and privileged offers. Our doors remain open, always.",
+    "footer_copyright_text": "",
+    "payment_enable": false,
+    "hide_footer_on_all_pages": false,
+    "show_email_footer_signup": false,
+    "footer_header_text_size_desktop": 18,
+    "footer_text_size": 21,
+    "footer_text_size_mobile": 15,
+    "footer_background_color": "#ffffff",
+    "footer_email_header_color": "#0a0a0a",
+    "footer_email_message_color": "#0a0a0a",
+    "footer_email_privacy_color": "#0a0a0a",
+    "footer_input_color": "#0a0a0a",
+    "footer_email_btn_color": "#232323",
+    "footer_text_color": "#0a0a0a",
+    "footer_text_color_highlighed_bg": "#0a0a0a",
+    "footer_text_color_highlighed": "#ffffff",
+    "global_menu": "main-menu",
+    "global_cart_text_color": "#ffffff",
+    "global_cart_number_bg_color": "#232323",
+    "global_menu_search_radius": true,
+    "global_search_bg_color": "#232323",
+    "global_menu_bg_color": "#0a0a0a",
+    "global_nav_txt_color": "#ffffff",
+    "global_child_link_color": "#ffffff",
+    "global_arrow_color": "#ffffff",
+    "global_line_divider_color": "#232323",
+    "global_menu_font_size": 20,
+    "enter_screen_logo": "shopify://shop_images/Asset_40.png",
+    "enter_screen_logo_size": 100,
+    "global_menu_logo": "shopify://shop_images/Asset_40.png",
+    "global_menu_logo_size": 80,
+    "shop_screen_logo": "shopify://shop_images/Official_Logo_b1db2e59-9ded-43f9-bff0-df73da4cca4f.svg",
+    "shop_screen_logo_size": 90,
+    "collection_screen_logo": "shopify://shop_images/Official_Logo_b1db2e59-9ded-43f9-bff0-df73da4cca4f.svg",
+    "collection_screen_logo_size": 87,
+    "product_screen_logo": "shopify://shop_images/Official_Logo_b1db2e59-9ded-43f9-bff0-df73da4cca4f.svg",
+    "product_screen_logo_size": 94,
+    "password_screen_logo": "shopify://shop_images/Official_Logo_b1db2e59-9ded-43f9-bff0-df73da4cca4f.svg",
+    "password_screen_logo_size": 65,
+    "show_password_logo": true,
+    "show_disk": false,
+    "sound_bar_color": "linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 100%)",
+    "enable_custom_nav_font": true,
+    "custom_nav_font_name": "montserrat",
+    "enable_custom_countdown_font": true,
+    "custom_countdown_font_name": "montserrat",
+    "enable_custom_font_header": true,
+    "custom_font_header_name": "montserrat",
+    "custom_font_header": "",
+    "body_font": "montserrat_n4",
+    "enable_custom_body_font": false,
+    "custom_body_font_name": "JaneAust",
+    "custom_body_font": "https://cdn.shopify.com/s/files/1/0916/0451/7227/files/JaneAust.woff2?v=1749777578",
+    "enable_custom_btn_font": true,
+    "custom_btn_font_name": "montserrat",
+    "custom_btn_font": "",
+    "enable_custom_marquee_font": true,
+    "custom_marquee_font_name": "montserrat",
+    "sections": {
+      "global-menu": {
+        "type": "global-menu",
+        "settings": {}
+      },
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {}
+      },
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {}
+      },
+      "music-player": {
+        "type": "music-player",
+        "settings": {}
+      },
+      "theme-footer": {
+        "type": "theme-footer",
+        "blocks": {
+          "link_list_mTrFXN": {
+            "type": "link_list",
+            "disabled": true,
+            "settings": {
+              "heading": "Additional Links",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "link_list_mTrFXN"
+        ],
+        "settings": {
+          "footer_success_message": "Thank you for subscribing!"
+        }
+      }
+    },
+    "content_for_index": []
+  }
+}

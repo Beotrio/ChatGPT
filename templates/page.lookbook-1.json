@@ -1,0 +1,220 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background": {
+      "type": "default-background",
+      "settings": {
+        "password_bg_style": "color",
+        "bg_color": "#ffffff",
+        "bg_color_mobile": "#ffffff",
+        "overlay_top_color": "#232323",
+        "overlay_top_opacity": 1,
+        "overlay_bottom_color": "#000000",
+        "overlay_bottom_opacity": 0,
+        "overlay_top_color_mobile": "#000000",
+        "overlay_top_opacity_mobile": 0,
+        "overlay_bottom_color_mobile": "#000000",
+        "overlay_bottom_opacity_mobile": 0,
+        "show_background_image_mobile": false
+      }
+    },
+    "clock": {
+      "type": "default-timezone",
+      "settings": {
+        "index_date_color": "#000000",
+        "index_time_color": "#000000",
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "image_stream_wHwycb": {
+      "type": "image-stream",
+      "blocks": {
+        "slide_rFpxB3": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_K4gwci": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_JczGYP": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_HcNBTQ": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_qfPyjz": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_hLE9zm": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_rFpxB3",
+        "slide_K4gwci",
+        "slide_JczGYP",
+        "slide_HcNBTQ",
+        "slide_qfPyjz",
+        "slide_hLE9zm"
+      ],
+      "settings": {
+        "header_text": "LIMITED SUPPLY",
+        "header_link": "shopify://products/agony-in-gethsemane-white-t",
+        "header_link_text": "SHOP",
+        "bg_color": "#ffffff",
+        "header_color": "#0a0a0a",
+        "desktop_items_per_row": "4",
+        "aspect_ratio": "3/4",
+        "height_mode": "responsive",
+        "reverse_direction": false,
+        "hide_on_mobile": false,
+        "auto_scroll_speed": 20,
+        "title_size_desktop": 27,
+        "title_size_mobile": 19,
+        "title_weight": true,
+        "link_weight": true,
+        "top_spacing": 20,
+        "bottom_spacing": 20,
+        "top_spacing_mobile": 16,
+        "bottom_spacing_mobile": 16,
+        "image_gap": "0"
+      }
+    },
+    "lookbook": {
+      "type": "lookbook",
+      "blocks": {
+        "lookbook-item-1": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-2": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-3": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-4": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-5": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-6": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-7": {
+          "type": "lookbook_item",
+          "settings": {}
+        },
+        "lookbook-item-8": {
+          "type": "lookbook_item",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "lookbook-item-1",
+        "lookbook-item-2",
+        "lookbook-item-3",
+        "lookbook-item-4",
+        "lookbook-item-5",
+        "lookbook-item-6",
+        "lookbook-item-7",
+        "lookbook-item-8"
+      ],
+      "settings": {
+        "title": "The Garden of Gethsemane",
+        "description": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>",
+        "button_text": "Limited Supply",
+        "button_link": "shopify://products/agony-in-gethsemane-white-t",
+        "header_alignment": "center",
+        "show_scroll_animation": true,
+        "show_swipe_animation": true,
+        "columns": 3,
+        "title_alignment": "center",
+        "description_alignment": "center",
+        "title_font_size": 38,
+        "description_font_size": 14,
+        "title_color": "#0a0a0a",
+        "description_color": "#0a0a0a",
+        "button_color": "#0a0a0a",
+        "caption_text_color": "#ffffff",
+        "close_button_color": "#ffffff",
+        "scroll_animation_color": "#ffffff",
+        "swipe_animation_color": "#808080",
+        "image_border_radius": 4,
+        "title_desktop_margin": 0,
+        "title_mobile_margin": 0,
+        "description_desktop_margin": 0,
+        "description_mobile_margin": 0
+      }
+    },
+    "embedded_email_signup_qRNf6r": {
+      "type": "embedded-email-signup",
+      "name": "Embedded Email Signup",
+      "settings": {
+        "header": "Join Our VIP List",
+        "email_message": "At Via Deus, we treasure our relationship with you. We handle your personal information with the highest level of both duty of care and due diligence in order to design the right experience for you and to deliver the most valuable services.",
+        "email_placeholder": "EMAIL",
+        "button_text": "JOIN",
+        "success_message": "Thank you for subscribing! We'll keep you updated.",
+        "heading_alignment": "center",
+        "heading_color": "{{ shop.brand.colors.primary[0].background }}",
+        "message_color": "#4c4c4c",
+        "background_color": "{{ shop.brand.colors.secondary[0].background }}",
+        "button_background": "{{ shop.brand.colors.primary[0].background }}",
+        "button_text_color": "#ffffff",
+        "input_background": "{{ shop.brand.colors.primary[0].background }}",
+        "input_border": "{{ shop.brand.colors.secondary[0].background }}",
+        "input_text": "#000000",
+        "input_placeholder": "#999999",
+        "success_color": "#28a745",
+        "button_radius": 0,
+        "input_radius": 0,
+        "margin_top_desktop": 20,
+        "margin_bottom_desktop": 20,
+        "margin_top_mobile": 18,
+        "margin_bottom_mobile": 18,
+        "title_size_desktop": 24,
+        "title_size_mobile": 20,
+        "title_weight": "400"
+      }
+    }
+  },
+  "order": [
+    "background",
+    "clock",
+    "image_stream_wHwycb",
+    "lookbook",
+    "embedded_email_signup_qRNf6r"
+  ]
+}

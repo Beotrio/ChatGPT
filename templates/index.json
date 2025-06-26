@@ -1,0 +1,295 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "preloader": {
+      "type": "preloader",
+      "disabled": true,
+      "settings": {
+        "preloader_color": "#ffffff",
+        "preloader_logo_type": "text",
+        "preloader_text": "Plain Jane 3.0",
+        "preloader_txt_color": "#000000",
+        "preloader_txt_size": 12,
+        "preloader_duration": 1
+      }
+    },
+    "background": {
+      "type": "default-background",
+      "settings": {
+        "password_bg_style": "color",
+        "bg_slide_1": "shopify://shop_images/Kainos_Studios_Bible_Cover.jpg",
+        "bg_slide_2": "shopify://shop_images/download_8.jpg",
+        "bg_slide_3": "shopify://shop_images/IMG_2236.heic",
+        "desktop_bg_image": "shopify://shop_images/download_8.jpg",
+        "bg_color": "#ffffff",
+        "bg_color_mobile": "#ffffff",
+        "overlay_top_color": "#232323",
+        "overlay_top_opacity": 1,
+        "overlay_bottom_color": "#000000",
+        "overlay_bottom_opacity": 0,
+        "overlay_top_color_mobile": "#232323",
+        "overlay_top_opacity_mobile": 1,
+        "overlay_bottom_color_mobile": "#000000",
+        "overlay_bottom_opacity_mobile": 0,
+        "show_background_image_mobile": false
+      }
+    },
+    "compact_menu": {
+      "type": "compact-menu",
+      "settings": {
+        "logo-alignment": "center",
+        "menu_margin_top": 0
+      }
+    },
+    "email_popup_QbcNGN": {
+      "type": "email-popup",
+      "settings": {
+        "popup_title": "GET NOTIFIED OF NEXT DROP",
+        "popup_description": "Lorem ipsum dolor sit amet consectetur. Mauris orci viverra nec ac aliquet elit imperdiet egestas sit.",
+        "privacy_text": "By signing up, you agree to receive email marketing and accept our privacy policy.",
+        "success_title": "Thank You!",
+        "success_message": "You've been successfully added to our mailing list. Stay tuned for updates!",
+        "form_background_color": "#f2f2f2",
+        "title_color": "#000000",
+        "description_color": "#1b1b1b",
+        "privacy_text_color": "#1b1b1b",
+        "input_background_color": "#0a0a0a",
+        "input_text_color": "#333333",
+        "input_placeholder_color": "#999999",
+        "submit_button_color": "#0a0a0a",
+        "submit_button_text_color": "#ffffff",
+        "close_button_color": "#333333",
+        "success_title_color": "#000000",
+        "success_message_color": "#333333",
+        "disable_bottom_fade": false,
+        "remove_border_radius": true,
+        "enable_test_mode": false
+      }
+    },
+    "hero_RatabQ": {
+      "type": "hero",
+      "blocks": {
+        "button_qFe8jm": {
+          "type": "button",
+          "settings": {
+            "text": "Go to Gethsemane",
+            "link": "shopify://pages/gethsemane-lookbook",
+            "bg_color": "#ffffff",
+            "text_color": "#0a0a0a",
+            "border_radius": 4
+          }
+        }
+      },
+      "block_order": [
+        "button_qFe8jm"
+      ],
+      "settings": {
+        "media_type": "image",
+        "title": "Matthew 26:39 NIV",
+        "hero_height": "100vh",
+        "use_image_mobile": false,
+        "single_image_mobile": true,
+        "mobile_image_preference": "image_1",
+        "content_position": "bottom_left",
+        "title_weight": "700",
+        "title_color": "#ffffff",
+        "show_top_overlay": false,
+        "show_bottom_overlay": true,
+        "top_overlay_color": "#000000",
+        "bottom_overlay_color": "#1b1b1b",
+        "top_overlay_height": 40,
+        "bottom_overlay_height": 20,
+        "top_spacing": 0,
+        "bottom_spacing": 0,
+        "top_spacing_mobile": 0,
+        "bottom_spacing_mobile": 0
+      }
+    },
+    "product_carousel_xttEt3": {
+      "type": "product-carousel",
+      "blocks": {
+        "product_LXnbJX": {
+          "type": "product",
+          "settings": {
+            "product": "agony-in-gethsemane-white-t"
+          }
+        }
+      },
+      "block_order": [
+        "product_LXnbJX"
+      ],
+      "name": "Product Carousel",
+      "settings": {
+        "title": "LIMITED SUPPLY",
+        "shop_text": "SHOP",
+        "shop_link": "shopify://collections/all",
+        "product_text_alignment": "center",
+        "show_product_titles": true,
+        "show_product_prices": true,
+        "show_compare_price": true,
+        "show_sold_out_badge": true,
+        "show_sale_badge": true,
+        "show_preorder_badge": true,
+        "products_per_row": 1,
+        "products_per_row_mobile": 2,
+        "title_size_desktop": 35,
+        "title_size_mobile": 19,
+        "product_title_size_desktop": 19,
+        "product_title_size_mobile": 18,
+        "product_price_size_desktop": 22,
+        "product_price_size_mobile": 16,
+        "title_weight": true,
+        "link_weight": true,
+        "product_title_weight": true,
+        "background_color": "rgba(0,0,0,0)",
+        "title_color": "{{ shop.brand.colors.primary[0].background }}",
+        "arrow_color": "#0a0a0a",
+        "product_title_color": "{{ shop.brand.colors.primary[0].background }}",
+        "product_price_color": "{{ shop.brand.colors.primary[0].background }}",
+        "preorder_bg_color": "#000000",
+        "preorder_text_color": "#ffffff",
+        "sold_out_bg_color": "#000000",
+        "sold_out_text_color": "#ffffff",
+        "sale_bg_color": "#ff0000",
+        "sale_text_color": "#ffffff",
+        "compare_price_color": "#ff0000",
+        "margin_top_desktop": 20,
+        "margin_bottom_desktop": 20,
+        "margin_top_mobile": 16,
+        "margin_bottom_mobile": 16,
+        "header_grid_spacing": 32,
+        "image_info_spacing": 24,
+        "price_spacing": 8,
+        "product_gap_desktop": 16,
+        "product_gap_mobile": 16,
+        "product_collection": "frontpage"
+      }
+    },
+    "lookbook_list_WhMnXJ": {
+      "type": "lookbook-list",
+      "blocks": {
+        "collection_7g6bx4": {
+          "type": "collection",
+          "settings": {
+            "title": "Collection Title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": ""
+          }
+        },
+        "collection_wFX9EP": {
+          "type": "collection",
+          "settings": {
+            "title": "Collection Title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": ""
+          }
+        },
+        "collection_HcJyzz": {
+          "type": "collection",
+          "settings": {
+            "title": "Collection Title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": ""
+          }
+        },
+        "collection_VtHqYz": {
+          "type": "collection",
+          "settings": {
+            "title": "Collection Title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": ""
+          }
+        },
+        "collection_YkFchy": {
+          "type": "collection",
+          "settings": {
+            "title": "Collection Title",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_7g6bx4",
+        "collection_wFX9EP",
+        "collection_HcJyzz",
+        "collection_VtHqYz",
+        "collection_YkFchy"
+      ],
+      "name": "Collection List",
+      "settings": {
+        "title": "",
+        "mobile_item_limit": "all",
+        "section_title_size_desktop": 16,
+        "section_title_size_mobile": 14,
+        "lookbook_title_size_desktop": 14,
+        "lookbook_title_size_mobile": 12,
+        "description_size_desktop": 17,
+        "description_size_mobile": 14,
+        "section_title_weight": true,
+        "title_weight": true,
+        "background_color": "#ffffff",
+        "section_title_color": "#000000",
+        "title_color": "#000000",
+        "description_color": "#e3342f",
+        "image_border_radius": 4,
+        "top_spacing": 20,
+        "bottom_spacing": 20,
+        "top_spacing_mobile": 16,
+        "bottom_spacing_mobile": 16,
+        "header_grid_spacing": 32,
+        "gap": 32,
+        "gap_mobile": 16
+      }
+    },
+    "embedded_email_signup_r9wUHh": {
+      "type": "embedded-email-signup",
+      "name": "Embedded Email Signup",
+      "settings": {
+        "header": "Join Our VIP List",
+        "email_message": "At Via Deus, we treasure our relationship with you. We handle your personal information with the highest level of both duty of care and due diligence in order to design the right experience for you and to deliver the most valuable services.",
+        "email_placeholder": "EMAIL",
+        "button_text": "JOIN",
+        "success_message": "Thank you for subscribing! We'll keep you updated.",
+        "heading_alignment": "center",
+        "heading_color": "#000000",
+        "message_color": "#4c4c4c",
+        "background_color": "{{ shop.brand.colors.primary[0].background }}",
+        "button_background": "{{ shop.brand.colors.primary[0].background }}",
+        "button_text_color": "#ffffff",
+        "input_background": "{{ shop.brand.colors.primary[0].background }}",
+        "input_border": "{{ shop.brand.colors.primary[0].background }}",
+        "input_text": "#000000",
+        "input_placeholder": "#999999",
+        "success_color": "#28a745",
+        "button_radius": 4,
+        "input_radius": 4,
+        "margin_top_desktop": 20,
+        "margin_bottom_desktop": 20,
+        "margin_top_mobile": 18,
+        "margin_bottom_mobile": 18,
+        "title_size_desktop": 24,
+        "title_size_mobile": 20,
+        "title_weight": "400"
+      }
+    }
+  },
+  "order": [
+    "preloader",
+    "background",
+    "compact_menu",
+    "email_popup_QbcNGN",
+    "hero_RatabQ",
+    "product_carousel_xttEt3",
+    "lookbook_list_WhMnXJ",
+    "embedded_email_signup_r9wUHh"
+  ]
+}

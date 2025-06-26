@@ -1,0 +1,459 @@
+{{ 'interactive-environments.css' | asset_url | stylesheet_tag }}
+
+{%- assign headerSnippetPath = 'header-index' -%}
+
+    <div class="svg-wrap">
+                <svg width="64" height="64" viewBox="0 0 64 64">
+                    <path id="arrow-left-2" d="M26.667 10.667q1.104 0 1.885 0.781t0.781 1.885q0 1.125-0.792 1.896l-14.104 14.104h41.563q1.104 0 1.885 0.781t0.781 1.885-0.781 1.885-1.885 0.781h-41.563l14.104 14.104q0.792 0.771 0.792 1.896 0 1.104-0.781 1.885t-1.885 0.781q-1.125 0-1.896-0.771l-18.667-18.667q-0.771-0.813-0.771-1.896t0.771-1.896l18.667-18.667q0.792-0.771 1.896-0.771z" />
+                </svg>
+                <svg width="64" height="64" viewBox="0 0 64 64">
+                    <path id="arrow-right-2" d="M37.333 10.667q1.125 0 1.896 0.771l18.667 18.667q0.771 0.771 0.771 1.896t-0.771 1.896l-18.667 18.667q-0.771 0.771-1.896 0.771-1.146 0-1.906-0.76t-0.76-1.906q0-1.125 0.771-1.896l14.125-14.104h-41.563q-1.104 0-1.885-0.781t-0.781-1.885 0.781-1.885 1.885-0.781h41.563l-14.125-14.104q-0.771-0.771-0.771-1.896 0-1.146 0.76-1.906t1.906-0.76z" />
+                </svg>
+    </div>	
+                  
+  {%- for block in section.blocks -%}
+      {% case block.type %}
+        {% when 'environment_background' %}
+    
+
+
+    <div class="environment-container" 
+         data-section-type="interactive-environment"
+         style="
+           margin-top: {{ section.settings.margin_top_desktop }}px;
+           margin-bottom: {{ section.settings.margin_bottom_desktop }}px;
+         ">
+        <div id="logo-container">
+            {% if section.settings.show_interactive_logo %}
+            {% if section.settings.interactive_screen_logo %}
+            <img src="{{ section.settings.interactive_screen_logo | image_url }}"
+                height="auto"
+                style="margin-top: 0; width: {{ section.settings.interactive_screen_logo_size }}px;"
+                alt="Logo"
+                class="logo environment-logo"
+            >
+            {% else %}        
+            <img src="{{ 'Supreme-dummy.png' | asset_url }}" 
+                height="auto"
+                style="margin-top: 0; width: {{ section.settings.interactive_screen_logo_size }}px;"
+                alt="Logo"
+                class="logo environment-logo"
+            >
+            {% endif %}
+        {% endif %}
+
+            {%- for block in section.blocks -%}
+                {% case block.type %}
+                {% when 'index_timezone' %}
+                    <div id="interactive-date-time" class="date-time-container" style="{% if settings.enter_page_style == "interactive_environments" %}margin-top: 10px;{% endif %}">
+                        <div class="date" style="z-index: 16; color: {{ block.settings.index_date_color }}">{{ 'tn7d8e379f' | t }}</div>
+                        <div class="time" style="z-index: 16; color: {{ block.settings.index_time_color }}">{{ 't589b2285' | t }}</div>
+                    </div>
+                {% endcase %}
+            {%- endfor -%}
+        </div>
+
+        {% if block.settings.bg_img.src %}
+        <img id="store-environment-img" class="store-envrioment-img" src="{{ block.settings.bg_img.src | img_url: 'master' }}"/> 
+        {% else %}
+        <img src="{{ 'interactive-bg.png' | asset_url }}" id="store-environment-img" class="store-envrioment-img">
+        {% endif %}
+        
+        <!-- Add the swipe gesture here -->
+        {% if section.settings.show_swipe_gesture %}
+        <svg id="Swipe-horizontal_1" data-name="Swipe horizontal 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+            <path class="hand-x" d="M139.93,113.56l-41.12-6.93V76.08a9.25,9.25,0,0,0-9.25-9.25h0a9.25,9.25,0,0,0-9.25,9.25v57.36L71,122.65c-3.61-3.61-8.44-3.89-13.08,0,0,0-7.24,5.84-3.83,9.25l34,34h42.63a9.25,9.25,0,0,0,9.07-7.43l6.82-34.09A9.28,9.28,0,0,0,139.93,113.56Z"/>
+            <g class="swipe-horizontal">
+                <path class="line-horizontal" d="M70.85,42c19.69-12.46,37,0,37,0"/>
+                <polyline class="arrow-left" points="76.6 46.01 68.37 43.43 68.38 43.41 70.96 35.18"/>
+                <polyline class="arrow-right" points="100.21 44.66 108.43 42.08 108.43 42.06 105.85 33.84"/>
+            </g>
+        </svg>
+    {% endif %}
+    </div>
+{% endcase %}
+{% endfor %}
+
+
+{%- for block in section.blocks -%}
+      {% case block.type %}
+        
+          {% when 'interactive_point' %}
+          <div 
+            class="ip-reference" 
+            ip-data='
+            {
+            "description": "{{ block.settings.dialog_box_title }}",
+            "x": "{{ block.settings.ip_x_coordinate }}",
+            "y": "{{ block.settings.ip_y_coordinate }}",
+            "link": "{{ block.settings.ip_link }}",
+            "dialogBoxColor": "{{ block.settings.dialog_box_color }}",
+            "dialogWordColor": "{{ block.settings.dialog_word_color }}",
+            "ipColor": "{{ block.settings.ip_color }}",
+            "pulseRingColor": "{{ block.settings.ring_pulse_color }}"
+            }'
+            >
+          </div>
+
+        {% when 'transition_mark' %}                    
+        		
+    		<div style="--transition-width: {{ block.settings.transition_width }}px;" class="ip-reference"
+                  ip-data='
+            {
+            "isTransition": true,
+            "direction": "{{ block.settings.direction }}",
+            "link": "{{ block.settings.ip_link }}",
+            "description": "{{ block.settings.transition_title }}",
+            "x": "{{ block.settings.ip_x_coordinate }}",
+            "y": "{{ block.settings.ip_y_coordinate }}",
+            "backgroundColor": "{{ block.settings.background_color }}",
+            "transitionWordColor": "{{ block.settings.transition_word_color }}",
+            "arrowColor": "{{ block.settings.arrow_color }}",
+            "borderColor": "{{ block.settings.border_color }}",
+            "makeBgTransparent": {{ block.settings.enable_transparent_bg }},
+            "makeBorderTransparent": {{ block.settings.enable_transparent_border }},
+            "transitionWidth":"{{ block.settings.transition_width }}"
+        }'
+            ></div>
+             
+      {% endcase %}
+{%- endfor -%}
+
+<script src="{{ 'interactive-environments.js' | asset_url }}" type="text/javascript"></script>
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Interactive Space",
+    "presets": [
+      {
+        "name": "Interactive Space",
+            "blocks": [
+      {
+        "type": "environment_background"
+      },
+      {
+        "type": "index_timezone"
+      },
+      {
+        "type": "interactive_point"
+      },
+      {
+        "type": "interactive_point"
+      },
+      {
+        "type": "interactive_point"
+      },
+      {
+        "type": "transition_mark"
+      },
+       {
+        "type": "transition_mark"
+      }
+    ]
+      }
+    ],
+    "settings": [
+       
+      {
+      "type": "header",
+      "content":"General Settings"
+      },
+      {
+        "type": "paragraph",
+        "content": "This section can only be used once per page"
+      },
+      {
+        "type": "image_picker",
+        "id": "interactive_screen_logo",
+        "label": "Interactive Page Logo",
+        "info": "This will show on the interactive page"
+      },
+      {
+        "type": "range",
+        "id": "interactive_screen_logo_size",
+        "label": "Logo Size (px)",
+        "min": 65,
+        "max": 165,
+        "step": 1,
+        "default": 115
+      },
+      {
+        "type": "checkbox",
+        "id": "show_interactive_logo",
+        "label": "Show Logo on Interactive Page",
+        "default": false
+      },
+      {
+      "type": "checkbox",
+      "id": "show_swipe_gesture",
+      "label": "Show Swipe Gesture (mobile)",
+      "default": true
+      },
+      {
+        "type": "header",
+        "content": "Spacing"
+      },
+      {
+        "type": "range",
+        "id": "margin_top_desktop",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "Top Spacing (Desktop)",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom_desktop",
+        "min": 0,
+        "max": 200,
+        "step": 4,
+        "unit": "px",
+        "label": "Bottom Spacing (Desktop)",
+        "default": 20
+      },
+      {
+        "type": "range",
+        "id": "margin_top_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Top Spacing (Mobile)",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "margin_bottom_mobile",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Bottom Spacing (Mobile)",
+        "default": 16
+      }
+    ],
+      "blocks": [
+      {
+      "name": "Clock",
+      "type": "index_timezone",
+      "limit": 1,
+      "settings": [
+       {
+          "type": "color",
+          "id": "index_date_color",
+          "label": "Date Color",
+          "default": "#000"
+        },
+         {
+          "type": "color",
+          "id": "index_time_color",
+          "label": "Time Color",
+          "default": "#000"
+        }
+      ]
+    },
+        {
+      "name": "Background",
+      "type": "environment_background",
+      "limit": 1,
+      "settings": [
+        {
+      "type": "header",
+      "content":"Background Settings"
+      },
+        {
+          "type":"paragraph",
+          "content":"IMPORTANT: Use a 16:9 aspect ratio for best results. Use these dimensions as a reference 1280x720, 1920x1080, 2560x1440, or 3840x2160."
+        },
+       {
+        "type": "image_picker",
+        "id": "bg_img",
+        "label": "Background Image"
+      }
+      ]
+    },                     
+     {
+      "name": "Interactive Point",
+      "type": "interactive_point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "dialog_box_title",
+          "label": "Dialog Box Title",
+          "default": "Example Product"
+        },
+       {
+        "type": "color",
+        "id": "ip_color",
+        "label": "Point Color",
+        "default": "#fff"
+       },
+        {
+        "type": "color",
+        "id": "dialog_box_color",
+        "label": "Dialog Box Color",
+        "default": "#fff"
+       },
+        {
+        "type": "color",
+        "id": "dialog_word_color",
+        "label": "Dialog Words Color",
+        "default": "#000"
+       },
+        {
+        "type": "color",
+        "id": "ring_pulse_color",
+        "label": "Ring Pulse Color",
+        "default": "#fff"
+       },
+        {
+        "type": "range",
+        "id": "ip_x_coordinate",
+        "label": "X Coordinate",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 1,
+        "default": 50
+      },
+        {
+        "type": "range",
+        "id": "ip_y_coordinate",
+        "label": "Y Coordinate",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 1,
+        "default": 50
+      },
+        {
+      "type": "url",
+      "id": "ip_link",
+      "label": "Link"
+      }
+      ]
+    },
+        {
+      "name": "Transition Arrow",
+      "type": "transition_mark",
+      "settings": [
+        {
+          "type": "radio",
+          "id": "direction",
+          "label": "Direction",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "right"
+        },
+        {
+          "type": "text",
+          "id": "transition_title",
+          "label": "Transition Title",
+          "default": "Example Room"
+        },
+       {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#000"
+       },
+        {
+        "type": "color",
+        "id": "border_color",
+        "label": "Border Color",
+        "default": "#fff"
+       },
+        {
+        "type": "color",
+        "id": "transition_word_color",
+        "label": "Word Color",
+        "default": "#fff"
+       },
+        {
+        "type": "color",
+        "id": "arrow_color",
+        "label": "Arrow Color",
+        "default": "#fff"
+       },
+        {
+        "type": "range",
+        "id": "ip_x_coordinate",
+        "label": "X Coordinate",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 1,
+        "default": 50
+      },
+        {
+        "type": "range",
+        "id": "ip_y_coordinate",
+        "label": "Y Coordinate",
+        "min": 0,
+        "max": 100,
+        "unit": "px",
+        "step": 1,
+        "default": 50
+      },
+        {
+        "type": "range",
+        "id": "transition_width",
+        "label": "Transition Width",
+        "min": 50,
+        "max": 350,
+        "unit": "px",
+        "step": 5,
+        "default": 200
+      },
+        {
+      "type": "url",
+      "id": "ip_link",
+      "label": "Link"
+      },
+        {
+        "type": "checkbox",
+        "id": "enable_transparent_bg",
+        "label": "Make Background Transparent",
+        "default": false
+      },
+        {
+        "type": "checkbox",
+        "id": "enable_transparent_border",
+        "label": "Make Border Transparent",
+        "default": false
+      }
+      ]
+    }
+  ]
+}
+
+          
+{% endschema %}
+
+
+
+{% javascript %}
+{% endjavascript %}
+
+<style>
+  @media screen and (max-width: 767px) {
+    .environment-container {
+      margin-top: {{ section.settings.margin_top_mobile }}px !important;
+      margin-bottom: {{ section.settings.margin_bottom_mobile }}px !important;
+    }
+  }
+</style>

@@ -1,0 +1,37 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "interactive-environment": {
+      "type": "interactive-environment-1",
+      "blocks": {
+        "environment_background_crqFnm": {
+          "type": "environment_background",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "environment_background_crqFnm"
+      ],
+      "settings": {
+        "interactive_screen_logo_size": 115,
+        "show_interactive_logo": false,
+        "show_swipe_gesture": true,
+        "margin_top_desktop": 20,
+        "margin_bottom_desktop": 20,
+        "margin_top_mobile": 16,
+        "margin_bottom_mobile": 16
+      }
+    }
+  },
+  "order": [
+    "interactive-environment"
+  ]
+}

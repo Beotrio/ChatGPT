@@ -1,0 +1,396 @@
+window.onload = function() {
+    const container = document.querySelector('.environment-container');
+    if (container) {
+        const scrollAmount = (container.scrollWidth - container.clientWidth) / 2;
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+};
+if(Shopify.designMode){
+  mainFunc();
+  only1Section();
+document.addEventListener('shopify:section:load', function(event){
+  mainFunc();
+  only1Section();
+});
+}
+else{
+    
+  mainFunc();
+
+  const sections = document.querySelectorAll('[data-section-type="interactive-environment"]');
+  sections.forEach((section, index) => {
+    if (index > 0) {
+      section.style.display = 'none';
+    }
+  });
+  
+}
+
+
+function only1Section(){
+  const sections = document.querySelectorAll('[data-section-type="interactive-environment"]');
+  if (sections.length > 1) {
+    alert("You can only have one interactive environment section on a page");
+  sections.forEach((section, index) => {
+    if (index > 0) {
+      section.style.display = 'none';
+    }
+  });
+}}
+
+function mainFunc(event){                          
+    function setRealVh() {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+  setRealVh();
+  window.addEventListener('resize', setRealVh);
+  window.addEventListener('orientationchange', setRealVh);
+var U = 16/9;
+
+function updateDimensions() {
+    const container = document.querySelector('.environment-container');
+    if (container) {
+        const scrollAmount = (container.scrollWidth - container.clientWidth) / 2;
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+  
+    var width, height;
+    if (window.innerWidth / window.innerHeight < U) {
+        height = window.innerHeight;
+        width = window.innerHeight * U;
+    } else {
+        width = window.innerWidth;
+        height = window.innerWidth / U;
+    }
+    var element = document.getElementById('store-envrioment-img');
+    if (element) {
+        element.style.width = width + 'px';
+        element.style.height = height + 'px';
+    }
+  
+    positionLogo();
+    positionSwipeGesture();
+}
+window.addEventListener('resize', updateDimensions);
+updateDimensions();
+
+const ipReferenceElements = document.querySelectorAll('.ip-reference');
+const points = [];
+let idCounter = 1;
+ipReferenceElements.forEach(element => {
+  const ipDataAttribute = element.getAttribute('ip-data');
+          
+  const ipData = JSON.parse(ipDataAttribute);
+          
+  ipData.id = idCounter;
+  idCounter += 1;
+          
+  points.push(ipData);
+    });
+    
+const container = document.querySelector('.environment-container');
+  let mediaElement = document.getElementById('store-environment-img');
+if (!mediaElement) {
+    mediaElement = document.getElementById('store-environment-video');
+}
+  
+  function positionPoints() {
+    const mediaWidth = mediaElement.offsetWidth;
+    const mediaHeight = mediaElement.offsetHeight;
+    
+    points.forEach(point => {
+        let interactivePoint = container.querySelector(`.interactive-point[data-id="${point.id}"]`);
+        
+        if (!interactivePoint) {
+            interactivePoint = document.createElement('div');
+            interactivePoint.dataset.id = point.id;
+            container.appendChild(interactivePoint);
+            interactivePoint.classList.add('interactive-point');
+          
+              if (point.isTransition) {
+                interactivePoint.style.height = "0px";
+                interactivePoint.style.width = "0px";
+                interactivePoint.classList.add('transition-point');
+                
+                
+                
+                const nav = document.createElement('nav');
+                nav.classList.add('environment-nav');
+                const a = document.createElement('a');
+                const span = document.createElement('span');
+                const h3 = document.createElement('h3');
+                
+                if(point.makeBgTransparent){
+                  a.style.backgroundColor = "transparent";
+                }
+                else{
+                  a.style.backgroundColor = point.backgroundColor;
+                }
+                if(point.makeBorderTransparent){
+                  a.style.borderColor = "transparent";
+                }
+                else{
+                  a.style.borderColor = point.borderColor;
+                }
+                a.href = point.link;
+                a.style.setProperty('--transition-width', point.transitionWidth + 'px');
+                a.classList.add(point.direction == 'right' ? "next" : "prev")
+                span.classList.add('icon-wrap');
+                h3.textContent = point.description;
+                h3.style.color = point.transitionWordColor;
+                span.innerHTML = '<svg class="icon" width="20" height="20" viewBox="0 0 64 64"><use xlink:href="#arrow-' + point.direction + '-2"></svg>';
+                a.appendChild(span);
+                a.appendChild(h3);
+                nav.appendChild(a);
+                interactivePoint.appendChild(nav);
+                const svgElement = span.querySelector('svg');
+                if (svgElement) {
+                    svgElement.style.fill = point.arrowColor;
+                }
+                
+            } 
+            else
+            {
+            interactivePoint.style.backgroundColor = point.ipColor;
+            // Create a hit area
+            const hitArea = document.createElement('div');
+            hitArea.classList.add('hit-area');
+            interactivePoint.appendChild(hitArea);
+            
+            const dialogBox = document.createElement('a');
+            dialogBox.classList.add('dialog-box');
+            dialogBox.href = point.link;
+            dialogBox.textContent = point.description; 
+            dialogBox.style.color = point.dialogWordColor;
+            dialogBox.style.backgroundColor = point.dialogBoxColor;
+            dialogBox.style.setProperty('--dialog-pointer-color', point.dialogBoxColor);
+            interactivePoint.appendChild(dialogBox);
+            
+            const pulseRing = document.createElement('div');
+            pulseRing.classList.add('pulse-ring');
+            pulseRing.dataset.id = point.id;
+            pulseRing.style.borderColor = point.pulseRingColor
+            interactivePoint.appendChild(pulseRing);
+        }
+        }
+        interactivePoint.style.left = `${(point.x / 100) * mediaWidth}px`;
+        interactivePoint.style.top = `${(point.y / 100) * mediaHeight}px`;
+      if(!point.isTransition){
+        // Update the position and size of the hit area
+        const hitArea = interactivePoint.querySelector('.hit-area');
+        hitArea.style.left = '50%';
+        hitArea.style.top = '50%';
+        const dialogBox = interactivePoint.querySelector('.dialog-box');
+        
+        
+        // Adjust these values to align the tip of the dialog box with the interactive point
+        const pointCenterX = (point.x / 100);
+        const pointCenterY = (point.y / 100);
+        const dialogLeft = pointCenterX - (dialogBox.offsetWidth / 2) + 7;
+        const dialogTop = pointCenterY - dialogBox.offsetHeight + 18;  // 10px offset for the tip
+        dialogBox.style.left = `${dialogLeft}px`;
+        dialogBox.style.top = `${dialogTop}px`;
+        // Update the position and size of the pulse ring
+        const ringSize = Math.min(mediaWidth, mediaHeight) * 0.05;  // Adjust this value to change the size of the ring
+        const ringOffset = ringSize / 2;
+        const pulseRing = interactivePoint.querySelector('.pulse-ring');
+        pulseRing.style.left = `50%`;
+        pulseRing.style.top = `50%`;
+        pulseRing.style.marginLeft = `-${ringOffset}px`;
+        pulseRing.style.marginTop = `-${ringOffset}px`;
+        pulseRing.style.width = `${ringSize}px`;
+        pulseRing.style.height = `${ringSize}px`;
+      }
+        
+    });
+  
+  if (mediaElement.tagName === 'IMG') {
+    mediaElement.onload = positionPoints;
+} else if (mediaElement.tagName === 'VIDEO') {
+    mediaElement.onloadeddata = positionPoints;
+}}
+  
+  window.addEventListener('resize', positionPoints);
+  positionPoints(); 
+//FOR MOBILE INTERACTIVE POINTS
+document.addEventListener('DOMContentLoaded', function() {
+    let isMobile = window.innerWidth < 768;
+    function updateDialogVisibility() {
+        document.querySelectorAll('.dialog-box').forEach(dialog => {
+            if (isMobile) {
+                dialog.style.display = 'none';
+            } else {
+                dialog.style.display = '';
+            }
+        });
+    }
+    function attachClickListeners() {
+        document.querySelectorAll('.interactive-point').forEach(point => {
+            if (!point.classList.contains('transition-point')) {
+                point.removeEventListener('click', handlePointClick);
+                point.addEventListener('click', handlePointClick);
+            }
+        });
+    }
+    function handlePointClick(event) {
+        if (isMobile) {
+            event.preventDefault();
+            updateDialogVisibility();
+            let dialogBox = this.querySelector('.dialog-box');
+            if (dialogBox) {
+                dialogBox.style.display = 'block';
+                event.stopPropagation();
+            }
+        }
+    }
+    function attachDialogClickListeners() {
+        document.querySelectorAll('.dialog-box').forEach(dialogBox => {
+            dialogBox.removeEventListener('click', handleDialogClick);
+            dialogBox.addEventListener('click', handleDialogClick);
+        });
+    }
+    function handleDialogClick(event) {
+        if (isMobile) {
+            event.stopPropagation();
+        }
+    }
+    function attachOutsideClickListener() {
+        document.removeEventListener('click', handleOutsideClick);
+        document.addEventListener('click', handleOutsideClick);
+    }
+    function handleOutsideClick(event) {
+        if (isMobile) {
+            updateDialogVisibility();
+        }
+    }
+    function updateEventListeners() {
+        isMobile = window.innerWidth < 768;
+        attachClickListeners();
+        attachDialogClickListeners();
+        attachOutsideClickListener();
+    }
+    window.addEventListener('resize', function() {
+        const wasMobile = isMobile;
+        isMobile = window.innerWidth < 768;
+        if (wasMobile !== isMobile) {
+            updateEventListeners();
+            updateDialogVisibility();
+        }
+    });
+    updateEventListeners();
+});
+document.addEventListener('touchstart', function(e) {
+    let navButton = e.target.closest('nav a');
+    if (!navButton) {
+        let activeButtons = document.querySelectorAll('nav a.active');
+        activeButtons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+    }
+});
+ if (window.innerWidth <= 768) { 
+document.addEventListener('click', function(e) {
+    let navButton = e.target.closest('nav a');
+    if (navButton) {
+        if (navButton.classList.contains('active')) {
+            return;
+        } else {
+            e.preventDefault();
+            let activeButtons = document.querySelectorAll('nav a.active');
+            activeButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            navButton.classList.add('active');
+        }
+    } else {
+        let activeButtons = document.querySelectorAll('nav a.active');
+        activeButtons.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+    }
+});
+}
+let hasSwiped = false;
+  var svgSwipe = document.querySelector('#Swipe-horizontal_1');
+  if(svgSwipe){
+  svgSwipe.addEventListener('animationend', function() {
+      this.remove();
+  });
+    let timeoutId = setTimeout(function() {
+      svgSwipe.classList.add('fade-out');
+  }, 16000);
+  window.addEventListener('touchstart', function() {
+    if(!hasSwiped){
+    svgSwipe.classList.add('fade-out');
+    clearTimeout(timeoutId);  // cancel the automatic fade-out if the user touches the screen
+    hasSwiped = true;
+    }
+  r
+});
+}
+  
+}
+  
+function enableHorizontalScroll() {
+    const container = document.querySelector('.environment-container');
+    if (container) {
+        container.style.overflowX = 'scroll'; // Enable horizontal scrolling
+        
+        const scrollAmount = (container.scrollWidth - container.clientWidth) / 2;
+        container.scrollTo({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    }
+}
+window.addEventListener('load', enableHorizontalScroll);
+window.addEventListener('resize', enableHorizontalScroll);
+  
+function positionLogo() {
+    const container = document.querySelector('.environment-container');
+    const logo = document.getElementById('logo-container');
+    const envImage = document.getElementById('store-environment-img');
+    
+    if (logo && envImage) {
+        const totalWidth = envImage.offsetWidth;
+        const logoWidth = logo.offsetWidth;
+        const centerPosition = (totalWidth - logoWidth) / 2;
+        
+        logo.style.left = `${centerPosition}px`;
+        logo.style.right = 'auto';
+        logo.style.transform = 'none';
+        logo.style.margin = '0';
+    }
+}
+function updateDimensions() {
+    positionLogo(); 
+}
+window.addEventListener('load', positionLogo);
+  
+function positionSwipeGesture() {
+    const container = document.querySelector('.environment-container');
+    const swipeGesture = document.getElementById('Swipe-horizontal_1');
+    const envImage = document.getElementById('store-environment-img');
+    
+    if (swipeGesture && envImage) {
+        const totalWidth = envImage.offsetWidth;
+        const gestureWidth = 140; 
+        const centerPosition = (totalWidth - gestureWidth) / 2;
+        
+        swipeGesture.style.left = `${centerPosition - 100}px`;
+        swipeGesture.style.transform = 'none';
+        swipeGesture.style.margin = '0';
+    }
+}
+function updateDimensions() {
+    positionLogo();
+    positionSwipeGesture();
+}
+window.addEventListener('load', positionSwipeGesture);

@@ -1,0 +1,149 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background": {
+      "type": "default-background",
+      "settings": {
+        "password_bg_style": "slideshow",
+        "bg_color": "#ffffff",
+        "bg_color_mobile": "#ffffff",
+        "overlay_top_color": "#232323",
+        "overlay_top_opacity": 1,
+        "overlay_bottom_color": "#000000",
+        "overlay_bottom_opacity": 0,
+        "overlay_top_color_mobile": "#232323",
+        "overlay_top_opacity_mobile": 1,
+        "overlay_bottom_color_mobile": "#000000",
+        "overlay_bottom_opacity_mobile": 0,
+        "show_background_image_mobile": false
+      }
+    },
+    "clock": {
+      "type": "default-timezone",
+      "settings": {
+        "index_date_color": "#ffffff",
+        "index_time_color": "#ffffff",
+        "background_color": "rgba(0,0,0,0)"
+      }
+    },
+    "text_block_8AHNbC": {
+      "type": "text-block",
+      "name": "Text Block",
+      "settings": {
+        "subtitle": "TEXT BLOCK SUBTITLE",
+        "text": "OPENSPACES IS A DESIGN TECH STUDIO THAT PROVIDES TECHNOLOGY TO TRUE CREATIVES, EMPOWERING THEM TO BRING THEIR VISION TO LIFE THROUGH INNOVATIVE TOOLS AND SEAMLESS DIGITAL EXPERIENCES.",
+        "subtitle_alignment": "left",
+        "text_alignment": "left",
+        "subtitle_font": "inconsolata_n4",
+        "enable_custom_subtitle_font": false,
+        "custom_subtitle_font_name": "",
+        "custom_subtitle_font": "",
+        "text_font": "inconsolata_n4",
+        "enable_custom_text_font": false,
+        "custom_text_font_name": "",
+        "custom_text_font": "",
+        "subtitle_size": 16,
+        "subtitle_size_mobile": 14,
+        "text_size": 32,
+        "text_size_mobile": 24,
+        "subtitle_bold": false,
+        "text_bold": false,
+        "background_color": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "subtitle_color": "#1B1B1B",
+        "text_color": "#1B1B1B",
+        "text_animation_type": "none",
+        "top_spacing": 20,
+        "bottom_spacing": 20,
+        "top_spacing_mobile": 20,
+        "bottom_spacing_mobile": 20,
+        "remove_padding": false
+      }
+    },
+    "image_stream_3teRwf": {
+      "type": "image-stream",
+      "blocks": {
+        "slide_m6gWky": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_k8MCfm": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_LKEJGt": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_aXwxy7": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_aJ3gTP": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        },
+        "slide_pHT6VV": {
+          "type": "slide",
+          "settings": {
+            "caption": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_m6gWky",
+        "slide_k8MCfm",
+        "slide_LKEJGt",
+        "slide_aXwxy7",
+        "slide_aJ3gTP",
+        "slide_pHT6VV"
+      ],
+      "name": "Image Stream",
+      "settings": {
+        "header_text": "IMAGE STREAM TITLE",
+        "header_link": "",
+        "header_link_text": "SHOP",
+        "bg_color": "#ffffff",
+        "header_color": "#1B1B1B",
+        "desktop_items_per_row": "4",
+        "aspect_ratio": "3/4",
+        "height_mode": "responsive",
+        "reverse_direction": false,
+        "hide_on_mobile": false,
+        "auto_scroll_speed": 20,
+        "title_size_desktop": 16,
+        "title_size_mobile": 14,
+        "title_weight": false,
+        "link_weight": false,
+        "top_spacing": 20,
+        "bottom_spacing": 20,
+        "top_spacing_mobile": 16,
+        "bottom_spacing_mobile": 16,
+        "image_gap": "0"
+      }
+    }
+  },
+  "order": [
+    "background",
+    "clock",
+    "text_block_8AHNbC",
+    "image_stream_3teRwf"
+  ]
+}

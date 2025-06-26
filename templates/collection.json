@@ -1,0 +1,144 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background": {
+      "type": "default-background",
+      "settings": {
+        "password_bg_style": "color",
+        "bg_color": "#ffffff",
+        "bg_color_mobile": "#ffffff",
+        "overlay_top_color": "#232323",
+        "overlay_top_opacity": 1,
+        "overlay_bottom_color": "#ffffff",
+        "overlay_bottom_opacity": 1,
+        "overlay_top_color_mobile": "#0a0a0a",
+        "overlay_top_opacity_mobile": 1,
+        "overlay_bottom_color_mobile": "#ffffff",
+        "overlay_bottom_opacity_mobile": 1,
+        "show_background_image_mobile": false
+      }
+    },
+    "collection_products_display_1": {
+      "type": "collection-products-display-1",
+      "blocks": {
+        "sort_option_1": {
+          "type": "sort_option",
+          "settings": {
+            "title": "Featured",
+            "sort_by": "manual"
+          }
+        },
+        "sort_option_2": {
+          "type": "sort_option",
+          "settings": {
+            "title": "Lowest Priced",
+            "sort_by": "price-ascending"
+          }
+        },
+        "sort_option_3": {
+          "type": "sort_option",
+          "settings": {
+            "title": "Newest First",
+            "sort_by": "created-descending"
+          }
+        },
+        "sort_option_4": {
+          "type": "sort_option",
+          "settings": {
+            "title": "A - Z Order",
+            "sort_by": "title-ascending"
+          }
+        }
+      },
+      "block_order": [
+        "sort_option_1",
+        "sort_option_2",
+        "sort_option_3",
+        "sort_option_4"
+      ],
+      "settings": {
+        "collection_menu": "",
+        "index_date_color": "#0a0a0a",
+        "index_time_color": "#0a0a0a",
+        "show_date_time": true,
+        "cart_text_color": "#0a0a0a",
+        "cart_number_color": "#ffffff",
+        "cart_number_bg_color": "#0a0a0a",
+        "reverse_desktop_menu": "right",
+        "text-alignment": "start",
+        "font-size": 20,
+        "menu-spacing": 5,
+        "menu_spacing_child": 5,
+        "menu_spacing_subchild": 5,
+        "menu-link-color": "#0a0a0a",
+        "navlink_background_color": "#0a0a0a",
+        "navlink_hover_color": "#ffffff",
+        "navlink_arrow_color": "#232323",
+        "fix_desktop_menu": true,
+        "whitespace": "normal",
+        "product_title_size": 20,
+        "product_title_color": "#000000",
+        "show-title": true,
+        "product_price_size": 20,
+        "compare_price_size": 12,
+        "product_price_color": "#000000",
+        "compare_price_color": "#fe0000",
+        "currency_format": "with_currency",
+        "show_price": true,
+        "show_compare_price": true,
+        "on_sale_text_size": 17,
+        "preorder_bg_color": "#000000",
+        "preorder_text_color": "#ffffff",
+        "on_sale_bg_color": "#000000",
+        "on_sale_text_color": "#ffffff",
+        "oos_bg_color": "#ff0100",
+        "oos_text_color": "#ffffff",
+        "show_preorder": true,
+        "show_on_sale": true,
+        "show_oos": true,
+        "product_bg_radius": 5.5,
+        "product_bg_color": "#ffffff",
+        "product_bg_transparent": true,
+        "refine_button_position": "right",
+        "search_icon_color": "#ffffff",
+        "filter_icon_color": "#ffffff",
+        "swap_refine_buttons": false,
+        "show_search_icon": true,
+        "show_filter_icon": true,
+        "search_box_opacity": 0.5,
+        "search_box_bg_color": "#ffffff",
+        "search_cancel_button_color": "#b0b0b0",
+        "search_result_txt_color": "#000000",
+        "search_result_line_color": "#000000",
+        "search_box_input_bg_color": "#ffffff",
+        "search_box_input_txt_color": "#000000",
+        "enable_search_box_radius": true,
+        "enable_search_input_radius": true,
+        "enable_search_box_shadow": true,
+        "sort_option_text_color": "#000000",
+        "sort_option_background_color": "#ffffff",
+        "sort_option_active_text_color": "#1b1b1b",
+        "sort_option_active_background_color": "#ededed",
+        "sort_menu_handle_text_color": "#ffffff",
+        "sort_menu_handle_background_color": "#fe0100",
+        "pagination_type": "infinite_scroll",
+        "pagination_text_color": "#000000",
+        "pagination_active_color": "#fe0100",
+        "pagination_arrow_color": "#000000",
+        "pagination_active_text_color": "#ffffff"
+      }
+    }
+  },
+  "order": [
+    "background",
+    "collection_products_display_1"
+  ]
+}

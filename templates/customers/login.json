@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "background": {
+      "type": "default-background",
+      "settings": {
+        "password_bg_style": "color",
+        "bg_color": "#ffffff",
+        "bg_color_mobile": "#ffffff",
+        "overlay_top_color": "#000000",
+        "overlay_top_opacity": 0,
+        "overlay_bottom_color": "#000000",
+        "overlay_bottom_opacity": 0,
+        "overlay_top_color_mobile": "#000000",
+        "overlay_top_opacity_mobile": 0,
+        "overlay_bottom_color_mobile": "#000000",
+        "overlay_bottom_opacity_mobile": 0,
+        "show_background_image_mobile": false
+      }
+    },
+    "header": {
+      "type": "logo-section",
+      "settings": {
+        "show_date_time": true,
+        "index_date_color": "#000000",
+        "index_time_color": "#000000"
+      }
+    },
+    "account": {
+      "type": "account-login",
+      "settings": {
+        "account_login_side_img": "shopify://shop_images/download_8.jpg",
+        "remove_account_side_img": false,
+        "switch_account_side_img": false,
+        "curve_account_side_img": true,
+        "login_header": "LOGIN",
+        "login_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "login_header_color": "#000000",
+        "login_desc_color": "#000000",
+        "login_email_label_color": "#000000",
+        "login_email_input_border_color": "#000000",
+        "login_email_input_text_color": "#000000",
+        "login_password_label_color": "#000000",
+        "login_password_input_border_color": "#000000",
+        "login_password_input_text_color": "#000000",
+        "login_btn_txt": "Enter",
+        "login_btn_txt_color": "#ffffff",
+        "login_btn_color": "#0a0a0a",
+        "login_errors_color": "#fe0000",
+        "login_register": "Register Now",
+        "login_register_color": "#000000",
+        "login_forget_password": "Forgot Password?",
+        "login_forget_password_color": "#000000",
+        "login_back_store_text": "Back To Store",
+        "login_back_store_color": "#000000",
+        "enable_login_border_radius": false
+      }
+    }
+  },
+  "order": [
+    "background",
+    "header",
+    "account"
+  ]
+}
